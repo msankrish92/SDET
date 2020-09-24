@@ -1,4 +1,4 @@
-package ds.arrays;
+package ds.sort;
 
 public class MergeSort {
 

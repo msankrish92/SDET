@@ -4,7 +4,12 @@ import java.util.Arrays;
 
 import org.junit.Test;
 
-public class SmallestPositiveInt {
+public class Question4 {
+	
+	/*
+	 * Given an unsorted integer array, find the smallest missing positive integer.
+	 * [2,8,10,1,0, 2,1] => 3 
+	 */
 
 	@Test
 	public void example1() {

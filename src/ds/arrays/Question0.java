@@ -6,7 +6,13 @@ import java.util.Arrays;
 
 import org.junit.jupiter.api.Test;
 
-public class SumIndices1 {
+public class Question0 {
+	
+	/*
+	 * Find the give target from the given array 
+	 * input: {2,3,1,4,7,8}; 
+	 * output:[0, 1]
+	 */
 
 	@Test
 	public void example1() {

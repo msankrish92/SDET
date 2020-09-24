@@ -4,7 +4,9 @@ import java.util.Arrays;
 
 import org.junit.Test;
 
-public class RotateAnArray {
+public class Question3 {
+	
+//	Rotate Array the array the given number of times
 
 //	@Test
 //	public void example1() {
@@ -18,6 +20,9 @@ public class RotateAnArray {
 		int[] arr = { 1, 2, 3, 4 };
 		int rotate = 6;
 		rotateArray2(arr, rotate);
+		for (int s = 0; s < arr.length; s++) {
+			System.out.println(arr[s]);
+		}
 	}
 
 	private void rotateArray(int arr[], int rotate) {

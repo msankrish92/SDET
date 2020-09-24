@@ -2,7 +2,12 @@ package ds.arrays;
 
 import org.junit.Test;
 
-public class IntersectionOfArray {
+public class Question2 {
+	
+	/*
+	 * Given two arrays, write a method to print their intersection. [1,2,4,5,4]
+	 * [2,4,7,9,4] => [2,4]
+	 */
 
 	@Test
 	public void example1() {

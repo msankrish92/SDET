@@ -2,7 +2,14 @@ package ds.arrays;
 
 import org.junit.Test;
 
-public class HighestConsecutiveSum {
+public class Question5 {
+	
+	/*
+	 * Given an array of integers and a number k. Return the highest sum of any k
+	 * consecutive elements in the array. 
+	 * [2,4,1,3,5,6,0,1,3,1] k=3 maxSum
+	 * => 3+5+6 => 14
+	 */
 
 	@Test
 	public void example1() {

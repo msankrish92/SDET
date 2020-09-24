@@ -6,7 +6,13 @@ import java.util.Set;
 
 import org.junit.Test;
 
-public class DuplicateValue {
+public class Question6 {
+	
+	/*
+	 * Given an integer array, return all the duplicate values in the array
+	 * [2,1,3,1,3,1,3,4] => [1,1 ]
+	 */
+		
 
 	@Test
 	public void example1() {
