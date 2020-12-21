@@ -11,7 +11,7 @@ public class Question8 {
 
 	/*
 	 * Given an array of integers, a lucky integer is an integer which has a
-	 * frequency in the array equal to its value. Aadhithya Return a lucky integer
+	 * frequency in the array equal to its value. Return a lucky integer
 	 * in the array. If there are multiple lucky integers return the largest of
 	 * them. If there is no lucky integer return -1.
 	 * 
@@ -77,18 +77,20 @@ public class Question8 {
 ////		int arr[] = { 1, 2, 2, 3, 3, 4, 4, 4, 4, 5 };
 //		int key = 0;
 //		int value = 0;
-//
+//		
 //		for (int i = 0; i < arr.length; i++) {
 //			int temp = 0;
 //			int selectValue = arr[i];
 //			if(selectValue<0) {
 //				continue;
 //			}
+//			checks the number of occurance of element in the array
 //			for (int j = 0; j < arr.length; j++) {
 //				if (selectValue == arr[j]) {
 //					temp++;
 //				}
 //			}
+//			if selected value is greater than temp value store it the value
 //			if (Math.abs(selectValue) == temp && value < temp) {
 //				key = arr[i];
 //				value = temp;

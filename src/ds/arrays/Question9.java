@@ -45,32 +45,57 @@ public class Question9 {
 		System.out.println(monotonicArray(arr));
 	}
 
+	// Method 1 (Time Complexity O[n])
+	//	private boolean monotonicArray(int arr[]) {
+	//		boolean flag = true;
+	//		int temp = arr[0];
+	////		if the first element and the last element are same it is non monotonic Array
+	//		if (arr[0] == arr[arr.length - 1]) {
+	//			return false;
+	//		}
+	////		Checks for positive or negative number
+	//		if (arr[0] < arr[arr.length - 1]) {
+	////			loops through to check whether the next element is greater than current element
+	//			for (int i = 0; i < arr.length; i++) {
+	//				if (temp <= arr[i]) {
+	//					temp = arr[i];
+	//				} else {
+	//					flag = false;
+	//				}
+	//			}
+	//
+	//		} else {
+	//			for (int i = 0; i < arr.length; i++) {
+	//				if (temp >= arr[i]) {
+	//					temp = arr[i];
+	//				} else {
+	//					flag = false;
+	//				}
+	//			}
+	//		}
+	//		return flag;
+	//	}
+
+	// Method 2(Time Complexity O[n])
 	private boolean monotonicArray(int arr[]) {
-		boolean flag = true;
-		int temp = arr[0];
+		boolean increasing = true;
+		boolean decreasing = true;
 
+		//		if the first element and the last element are same mark it is neither increasing or decreasing monotonic
 		if (arr[0] == arr[arr.length - 1]) {
-			return false;
-		}
-
-		if (arr[0] < arr[arr.length - 1]) {
-			for (int i = 0; i < arr.length; i++) {
-				if (temp <= arr[i]) {
-					temp = arr[i];
-				} else {
-					flag = false;
-				}
-			}
-
+			increasing = false;
+			decreasing = false;
 		} else {
-			for (int i = 0; i < arr.length; i++) {
-				if (temp >= arr[i]) {
-					temp = arr[i];
-				} else {
-					flag = false;
-				}
+
+		//		Loops through to check whether the next element is greater or lesser
+		for (int i = 0; i < arr.length - 1; i++) {
+			if (arr[i] > arr[i + 1]) {
+				increasing = false;
+			} else if (arr[i] < arr[i + 1]) {
+				decreasing = false;
 			}
 		}
-		return flag;
+		}
+		return increasing || decreasing;
 	}
 }

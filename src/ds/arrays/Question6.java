@@ -1,6 +1,7 @@
 
 package ds.arrays;
 
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -58,6 +59,8 @@ public class Question6 {
 				}
 			}
 		}
+		
+		
 		System.out.println(duplicates);
 	}
 

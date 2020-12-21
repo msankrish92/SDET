@@ -54,20 +54,22 @@ public class Question7 {
 		}
 		System.out.println("-----");
 	}
+	
+	
 
 	// Method 1(Over all time complexity is O(n log(n))
-	private int[] squareOfEachNumber(int arr[]) {
-//		int output[] = new int[arr.length];// O[1]
-		for (int i = 0; i < arr.length; i++) {
-			arr[i] = arr[i] * arr[i];// O[n]
-		}
-		Arrays.sort(arr);// O(n log(n))
-		return arr;// O[1]
-	}
-
-	// Method 2(SortSquares - Uses merge Sort)(Time Complexity is O[n])
 //	private int[] squareOfEachNumber(int arr[]) {
-//
+////		int output[] = new int[arr.length];// O[1]
+//		for (int i = 0; i < arr.length; i++) {
+//			arr[i] = arr[i] * arr[i];// O[n]
+//		}
+//		Arrays.sort(arr);// O(n log(n))
+//		return arr;// O[1]
+//	}
+
+//	 Method 2(SortSquares - Uses merge Sort)(Time Complexity is O[n])
+//	private int[] squareOfEachNumber(int arr[]) {
+////		Dividing positive and negative number
 //		int length = arr.length;
 //		int k;
 //		for (k = 0; k < length; k++) {
@@ -80,6 +82,8 @@ public class Question7 {
 //		int i = k - 1; // negative start index
 //		int index = 0;
 //		int[] temp = new int[length];
+//
+////		sorting the element		
 //		while (i >= 0 && j < length) { // O[n]
 //			if (arr[i] * arr[i] < arr[j] * arr[j]) {
 //				temp[index] = arr[i] * arr[i];
@@ -90,7 +94,7 @@ public class Question7 {
 //			}
 //			index++;
 //		}
-//
+////		To add all the remaining elements to the array
 //		while (i >= 0) { // O[n]
 //			temp[index] = arr[i] * arr[i];
 //			i--;
@@ -107,27 +111,27 @@ public class Question7 {
 //	}
 
 	// Method3(Using two pointers)(Time Complexity 0[n])
-//	private int[] squareOfEachNumber(int arr[]) {
-//
-//		int length = arr.length;
-//		int temp[] = new int[arr.length];
-//		int startingPointer = 0;
-//		int endPointer = length - 1;
-//		int index = length - 1;
-//
-//		while (startingPointer <= endPointer) { //O[n]
-//			if (Math.abs(arr[startingPointer]) >= Math.abs(arr[endPointer])) {
-//				temp[index--] = arr[startingPointer] * arr[startingPointer];
-//				startingPointer++;
-//			} else {
-//				temp[index--] = arr[endPointer] * arr[endPointer];
-//				endPointer--;
-//			}
-//
-//		}
-//
-//		return temp;
-//
-//	}
+	private int[] squareOfEachNumber(int arr[]) {
+
+		int length = arr.length;
+		int temp[] = new int[arr.length];
+		int startingPointer = 0;
+		int endPointer = length - 1;
+		int index = length - 1;
+//		will compare the starting and end point and place the greater element in at last temp index
+		while (startingPointer <= endPointer) { //O[n]
+			if (Math.abs(arr[startingPointer]) >= Math.abs(arr[endPointer])) {
+				temp[index--] = arr[startingPointer] * arr[startingPointer];
+				startingPointer++;
+			} else {
+				temp[index--] = arr[endPointer] * arr[endPointer];
+				endPointer--;
+			}
+
+		}
+
+		return temp;
+
+	}
 
 }

@@ -1,4 +1,4 @@
-package ds.arrays;
+	package ds.arrays;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -16,17 +16,17 @@ public class Question1 {
 	 */
 
 //	@Test
-//	public void example() {
-//		int arr[] = { 1, 7, 4, 3, 1, 2, 1, 5, 1 };
-//		int desiredValue = 7;
-//		subArray(arr, desiredValue);
-//		System.out.println("--------");
-//	}
+	public void example() {
+		int arr[] = { 1, 7, 4, 3, 1, 2, 1, 5, 1 };
+		int desiredValue = 7;
+		subArray(arr, desiredValue);
+		System.out.println("--------");
+	}
 
 	@Test
 	public void example1() {
-		int arr[] = { 1, 1, 1, 1, 1 };
-		int desiredValue = 5;
+		int arr[] = { 1, 0, -1, 1, -1 };
+		int desiredValue = 0;
 		subArray(arr, desiredValue);
 		System.out.println("--------");
 	}

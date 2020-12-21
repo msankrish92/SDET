@@ -1,9 +1,8 @@
 package ds.arrays;
 
 import java.util.Arrays;
-import java.util.Set;
-import java.util.stream.Collectors;
-import java.util.stream.IntStream;
+import java.util.HashMap;
+import java.util.Map;
 
 import org.junit.Test;
 
@@ -90,19 +89,41 @@ public class Question11 {
 //	}
 
 //	Method 3
-	private void missingNumber(Integer[] input) {
+//	private void missingNumber(Integer[] input) {
+//
+//		Arrays.sort(input);
+////		IntStream -> gives int value of the given Range
+////		Boxed -> convert the int value back to Integer
+//		Set<Integer> missingIntegersList = IntStream.range(input[0], input[input.length - 1])
+//				.filter(currentInputValue -> Arrays.binarySearch(input, currentInputValue) < 0 ? true : false).boxed()
+//				.collect(Collectors.toSet());
+//
+//		if (missingIntegersList.isEmpty())
+//			throw new RuntimeException("No Missing integers");
+//		else
+//			System.out.println(missingIntegersList);
+//	}
 
-		Arrays.sort(input);
-//		IntStream -> gives int value of the given Range
-//		Boxed -> convert the int value back to Integer
-		Set<Integer> missingIntegersList = IntStream.range(input[0], input[input.length - 1])
-				.filter(currentInputValue -> Arrays.binarySearch(input, currentInputValue) < 0 ? true : false).boxed()
-				.collect(Collectors.toSet());
+	// Method 4
+	private void missingNumber(Integer arr[]) {
+		Arrays.sort(arr);
+		Map<Integer, Boolean> map = new HashMap<Integer, Boolean>();
+//			Creating a Map of size of largest number in array and storing false value
+		for (int i = arr[0]; i < arr[arr.length - 1]; i++) {
+			map.put(i, false);
+		}
 
-		if (missingIntegersList.isEmpty())
-			throw new RuntimeException("No Missing integers");
-		else
-			System.out.println(missingIntegersList);
+//			iterating over the array
+		for (int i = 0; i < arr.length; i++) {
+//				if map contains a value in arr[i] make that value true
+			if (map.containsKey(arr[i])) {
+				map.put(arr[i], true);
+			}
+		}
+
+//			return only the key that has false value
+		map.entrySet().stream().filter(s -> s.getValue() == false).forEach(s -> System.out.println(s.getKey()));
+
 	}
 
 }
