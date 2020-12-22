@@ -1,6 +1,8 @@
 package ds.String;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 import org.junit.Test;
 
@@ -35,7 +37,7 @@ public class Question2 {
 	  public int minFlips(String target) {
 	        int max = 0;
 	        List<Integer> out = new ArrayList<Integer>();
-	        out.eq
+
 	        char bit = '0';
 	        for(int i = 0; i < target.length(); i++) {
 	            if(target.charAt(i) != bit) {

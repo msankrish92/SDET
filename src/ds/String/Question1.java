@@ -56,25 +56,25 @@ public class Question1 {
 		System.out.println(count);
 	}
 	
-//	public void method2(String k) {
-//		Map<Character, Integer> map = new HashMap<>();
-//		List<String> lst = new ArrayList<String>();
-//		int i = 0;
-//		int j = 0;
-//		while(i<k.length()) {
-//			map.put(k.charAt(i), map.getOrDefault(k.charAt(i), 0)+1);
-//			if(map.size()<2) {
-//				lst.add(k.substring(i, j+1));
-//			}if(map.size()>2) {
-//				if(map.get(k.charAt(i)) == 1) {
-//					map.remove(map.get(k.charAt(i)));
-//				}else {
-////					map.put(k.charAt(i),)
-//				}
-//			}
-//		
-//		}
-//		
-//	}
+	public void method2(String k) {
+		Map<Character, Integer> map = new HashMap<>();
+		List<String> lst = new ArrayList<String>();
+		int i = 0;
+		int j = 0;
+		while(i<k.length()) {
+			map.put(k.charAt(i), map.getOrDefault(k.charAt(i), 0)+1);
+			if(map.size()<2) {
+				lst.add(k.substring(i, j+1));
+			}if(map.size()>2) {
+				if(map.get(k.charAt(i)) == 1) {
+					map.remove(map.get(k.charAt(i)));
+				}else {
+//					map.put(k.charAt(i),)
+				}
+			}
+		
+		}
+		
+	}
 	
 }
