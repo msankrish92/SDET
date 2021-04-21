@@ -7,25 +7,33 @@ import org.junit.Test;
 
 public class Question1 {
 
-	@Test
-	public void example1() {
-		String s = "aazzza";
-		int k = 2;
-		System.out.println(getLargestString(s, k));
-		
-	}
+//	@Test
+//	public void example1() {
+//		String s = "aazzza";
+//		int k = 2;
+//		System.out.println(getLargestString(s, k));
+//		
+//	}
+//	
+//	@Test
+//	public void example2() {
+//		String s = "aazzzza";
+//		int k = 3;
+//		System.out.println(getLargestString(s, k));
+//		
+//	}
+//	
+//	@Test
+//	public void example3() {
+//		String s = "aazzzzaa";
+//		int k = 2;
+//		System.out.println(getLargestString(s, k));
+//		
+//	}
 	
 	@Test
-	public void example2() {
-		String s = "aazzzza";
-		int k = 3;
-		System.out.println(getLargestString(s, k));
-		
-	}
-	
-	@Test
-	public void example3() {
-		String s = "aazzzzaa";
+	public void example4() {
+		String s = "aaaazzzz";
 		int k = 2;
 		System.out.println(getLargestString(s, k));
 		
