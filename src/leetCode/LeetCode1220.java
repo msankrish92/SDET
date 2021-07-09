@@ -11,28 +11,19 @@ public class LeetCode1220 {
 
 	@Test
 	public void example1() {
-		String input[] = { "a", "e", "i", "o", "u" };
 		int n = 2;
-//		System.out.println(method1(input, n));
-//		System.out.println(method1(input, n).size());
 		System.out.println(method2(n));
 	}
 	
 	@Test
 	public void example2() {
-		String input[] = { "a", "e", "i", "o", "u" };
 		int n = 3;
-//		System.out.println(method1(input, n));
-//		System.out.println(method1(input, n).size());
 		System.out.println(method2(n));
 	}
 
 	@Test
 	public void example3() {
-		String input[] = { "a", "e", "i", "o", "u" };
 		int n = 144;
-//		System.out.println(method1(input, n));
-//		System.out.println(method1(input, n).size());
 		System.out.println(method2(n));
 	}
 	
@@ -104,37 +95,30 @@ public class LeetCode1220 {
 				char key = it.next();
 				if(key == 'a') {
 					tempMap.put('e', tempMap.getOrDefault('e', 0L)+(map.get('a')%1000000007));
-//					map.put('e', map.get('a'));
 				}else if(key == 'e') {
 					tempMap.put('a', tempMap.getOrDefault('a', 0L)+(map.get('e')%1000000007));
 					tempMap.put('i', tempMap.getOrDefault('i', 0L)+(map.get('e')%1000000007));
-//					map.put('a', map.get('a') + 1);
-//					map.put('i', map.get('i') + 1);
+
 				}else if(key == 'i') {
 					tempMap.put('a', tempMap.getOrDefault('a', 0L)+(map.get('i')%1000000007));
 					tempMap.put('e', tempMap.getOrDefault('e', 0L)+(map.get('i')%1000000007));
 					tempMap.put('o', tempMap.getOrDefault('o', 0L)+(map.get('i')%1000000007));
 					tempMap.put('u', tempMap.getOrDefault('u', 0L)+(map.get('i')%1000000007));
-//					map.put('a', map.get('a') + 1);
-//					map.put('e', map.get('e') + 1);
-//					map.put('o', map.get('o') + 1);
-//					map.put('u', map.get('u') + 1);
+
 				}else if(key == 'o') {
 					tempMap.put('i', tempMap.getOrDefault('i', 0L)+(map.get('o')%1000000007));
 					tempMap.put('u', tempMap.getOrDefault('u', 0L)+(map.get('o')%1000000007));
-//					map.put('i', map.get('i') + 1);
-//					map.put('u', map.get('u') + 1);
+
 				}else if(key == 'u') {
 					tempMap.put('a', tempMap.getOrDefault('a', 0L)+(map.get('u')%1000000007));
-//					map.put('a', map.get('a') + 1);
 				}
 				
 			}
 			map = new HashMap<>(tempMap);
 		}
-//		System.out.println(map);
+
 		long sum = (map.values().stream().reduce(0L,(a,b) -> a+b))%1000000007;
-//		System.out.println(sum);
+
 			
 		return (int)sum;
 	
